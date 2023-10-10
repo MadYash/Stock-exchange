@@ -49,5 +49,17 @@ const getExchangeData = async (req, res) => {
   }
   return res.json({ msg: "Data Fetched Successfully ", data: data });
 };
+const getExchangeIcon = async (req, res) => {
+  const data = await ExchangeIcon.find({});
+  if (!data) {
+    return res.json({ error: "Failed to Load data" });
+  }
+  return res.json({ msg: "Data Fetched Successfully ", data: data });
+};
 
-module.exports = { storeExchangeData, storeExchangeIcon, getExchangeData };
+module.exports = {
+  storeExchangeData,
+  storeExchangeIcon,
+  getExchangeData,
+  getExchangeIcon,
+};
