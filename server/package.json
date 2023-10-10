@@ -1,12 +1,12 @@
 {
-  "name": "backend",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "rahul",
+  "author": "yash",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
