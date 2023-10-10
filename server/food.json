@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Classic Burger",
+      "description": "A delicious cheeseburger with lettuce, tomato, and special sauce.",
+      "image": "https://example.com/images/burger.jpg",
+      "price": 8.99,
+      "category": "Burgers"
+    },
+    {
+      "name": "Margherita Pizza",
+      "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.",
+      "image": "https://example.com/images/pizza.jpg",
+      "price": 12.99,
+      "category": "Pizza"
+    },
+    {
+      "name": "Creamy Pasta Alfredo",
+      "description": "Rich and creamy pasta Alfredo with parmesan and garlic sauce.",
+      "image": "https://example.com/images/pasta.jpg",
+      "price": 10.49,
+      "category": "Pasta"
+    },
+    {
+      "name": "Fresh Garden Salad",
+      "description": "A refreshing salad with mixed greens, vegetables, and vinaigrette dressing.",
+      "image": "https://example.com/images/salad.jpg",
+      "price": 7.99,
+      "category": "Salads"
+    },
+    {
+      "name": "Assorted Sushi Rolls",
+      "description": "Variety of sushi rolls with fresh fish, avocado, and soy sauce.",
+      "image": "https://example.com/images/sushi.jpg",
+      "price": 14.99,
+      "category": "Sushi"
+    },
+    {
+      "name": "Spicy Chicken Taco",
+      "description": "Delicious chicken taco with salsa, lettuce, and cheddar cheese.",
+      "image": "https://example.com/images/taco.jpg",
+      "price": 5.49,
+      "category": "Tacos"
+    },
+    {
+      "name": "Grilled Sirloin Steak",
+      "description": "Tender sirloin steak cooked to perfection with mashed potatoes and vegetables.",
+      "image": "https://example.com/images/steak.jpg",
+      "price": 18.99,
+      "category": "Steaks"
+    },
+    {
+      "name": "California Sushi Bowl",
+      "description": "A bowl of sushi rice topped with fresh fish, avocado, and spicy mayo.",
+      "image": "https://example.com/images/sushi_bowl.jpg",
+      "price": 11.99,
+      "category": "Sushi"
+    },
+    {
+      "name": "Chocolate Brownie Sundae",
+      "description": "Warm chocolate brownie topped with vanilla ice cream and whipped cream.",
+      "image": "https://example.com/images/brownie_sundae.jpg",
+      "price": 6.99,
+      "category": "Desserts"
+    },
+    {
+      "name": "Grilled Chicken Wrap",
+      "description": "Grilled chicken wrap with lettuce, tomato, and honey mustard dressing.",
+      "image": "https://example.com/images/chicken_wrap.jpg",
+      "price": 9.49,
+      "category": "Wraps"
+    }
+  ]
+  
