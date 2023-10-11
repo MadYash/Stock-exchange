@@ -53,7 +53,14 @@ const Exchange = () => {
         try {
             await axios
                 .get(`http://localhost:3001/api/exchange/get-exchange-icon-data`)
-                .then((res) => setIconData(res?.data))
+                .then((res) => {
+                    const data = res?.data
+                    const filteredData = data.data.filter(
+                        (item) =>
+                            item !== null
+                    );
+                    setIconData(filteredData);
+                })
                 .catch((err) => console.log("error fetching", err));
         } catch (error) {
             console.log("err is", error);
@@ -68,7 +75,12 @@ const Exchange = () => {
         (page - 1) * itemsPerPage,
         page * itemsPerPage
     );
-    console.log("data are", exchangeData, iconData)
+    const iconDataToShow = iconData?.slice(
+        (page - 1) * itemsPerPage,
+        page * itemsPerPage
+    );
+
+    console.log("data are", dataToShow, iconDataToShow, page)
     return (
         <>
             <div className="container my-3">
@@ -84,8 +96,10 @@ const Exchange = () => {
                         <table class="table table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <td>S.No</td>
+                                    <th>S. No.</th>
                                     <th>Icon</th>
+                                    <th>Name</th>
+                                    <th>Website</th>
                                     <th>Data Orderbook Start</th>
                                     <th>Data Orderbook End</th>
                                     <th>Data Quote Start</th>
@@ -94,16 +108,22 @@ const Exchange = () => {
                                     <th>Data Trade Start</th>
                                     <th>Data Trade End</th>
                                     <th>Exchange Id</th>
-                                    <th>Name</th>
-                                    <th>Website</th>
+
 
                                 </tr>
                             </thead>
                             <tbody>
                                 {dataToShow?.map((item, index) => (
                                     <tr key={index}>
-                                        <td>{index + 1}</td>
-                                        <td>test</td>
+                                        <td> {page === 1
+                                            ? index + 1
+                                            : index + 10 * (page - 1) + 1}</td>
+                                        <td>
+                                            <img key={index} src={iconDataToShow[index].url} alt='icon' />
+                                        </td>
+
+                                        <td>{item.name}</td>
+                                        <td>{item.website}</td>
                                         <td>{item.data_orderbook_start}</td>
                                         <td>{item.data_orderbook_end}</td>
                                         <td>{item.data_quote_start}</td>
@@ -112,10 +132,9 @@ const Exchange = () => {
                                         <td>{item.data_trade_start}</td>
                                         <td>{item.data_trade_end}</td>
                                         <td>{item.exchange_id}</td>
-                                        <td>{item.name}</td>
-                                        <td>{item.website}</td>
                                     </tr>
                                 ))}
+
                             </tbody>
                         </table>
                     </div>
