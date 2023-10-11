@@ -130,7 +130,6 @@ const Exchange = () => {
 
                     <button type="button" className="btn btn-outline-secondary my-3" onClick={storeData}>Click here to store data</button>
                     <button type="button" className="btn btn-outline-warning my-3" onClick={storeIcon}>Click here to store Icon</button>
-                    <button type="button" class="btn btn-outline-dark my-3">Click to fetch data</button>
                 </div>
 
                 <div className="mt-4 mx-2">
